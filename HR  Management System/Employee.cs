@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,33 +18,44 @@ namespace HR__Management_System
         {
             return Salary;
         }
-        public void SetSalary(decimal salary)
+        public bool SetSalary(decimal salary)
         {
             if (salary < 0)
             {
-                Console.WriteLine("Salary cannot be negative.");
+                Console.WriteLine("Salary cannot be negative!");
+                Logger.WriteLog("EMPLOYEE", $"Failed salary update for {Name} (ID={Id})");
+                return false; //operation failed
             }
-            else
-            {
-                Salary = salary;
-            }
+
+            Salary = salary;
+            Logger.WriteLog("EMPLOYEE", $"Salary updated for {Name} (ID={Id}), NewSalary={Salary}");
+            return true; //operation successful
         }
+
 
         public Employee(int id, string name, string department, decimal salary)
         {
             Id = id;
             Name = name;
             Department = department;
-            Salary = salary;
+            SetSalary(salary);
         }
         public virtual decimal CalculatePay(double hoursWorked)
         {
             if (hoursWorked < 0)
             {
-                throw new Exception("Hours worked cannot be negative!");
+                Console.WriteLine("Hours worked cannot be negative!");
+                Logger.WriteLog("PAYROLL", $"Failed to calculate pay for {Name} (ID={Id})");
+                return 0;
             }
-            
-            return Salary;
+
+            double normalHours = 160; // Assuming 160 hours as standard monthly hours
+            decimal hourlyRate = GetSalary() / (decimal)normalHours; 
+            decimal pay = hourlyRate * (decimal)Math.Min(hoursWorked, normalHours);
+
+            Logger.WriteLog("PAYROLL", $"Calculated base pay for {Name} (ID={Id}): {pay:C} for {hoursWorked} hours.");
+
+            return pay;
         }
 
         public override string ToString()
