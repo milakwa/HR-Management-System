@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +13,15 @@ namespace HR__Management_System
        public string Reason { get; set; }
        public string Status { get; set; }
 
-        public LeaveRequest(int id,int days,string reason,string status)
+        public LeaveRequest(int id,int days,string reason)
         {
             EmpId = id;
             Days = days;
             Reason = reason;
             Status = "Pending";
+
+            Logger.WriteLog("LEAVE", $"New leave request created for EmpId={EmpId}, Days={Days}, Reason={Reason}, Status={Status}");
+        
         }
         public void Approve()
         {
