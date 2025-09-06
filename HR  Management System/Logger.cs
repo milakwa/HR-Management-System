@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace HR__Management_System
 {
-    public class Logger
+    public static class Logger
     {
-        public List<string> logs = new List<string>();
-        public string logFilePath = "system.log";
-        public void WriteLog(string message)
+        public static List<string> logs = new List<string>();  
+        public static string logFilePath = "system.log";
+        public static void WriteLog(string module,string message)
         {
-            string logEntry = $"{DateTime.Now}: {message}";
+            string logEntry = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] [{module}] {message}";
             logs.Add(logEntry);
 
-            File.WriteAllLines(logFilePath, logs);
+            File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
         }
         
-        public void LoadLogs()
+        public static void LoadLogs()
         {
             if (File.Exists(logFilePath))
             {
                 logs = File.ReadAllLines(logFilePath).ToList();
             }
         }
-        public void DisplayLogs()
+        public static void DisplayLogs()
         {
             Console.WriteLine("\n--- System Logs ---");
             foreach (var log in logs)
