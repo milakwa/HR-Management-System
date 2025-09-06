@@ -86,7 +86,7 @@ namespace HR__Management_System
         {
             if (emp == null)
             {
-                Console.WriteLine("❌ Employee not found.");
+                Console.WriteLine("Employee not found.");
                 return false;
             }
             else
