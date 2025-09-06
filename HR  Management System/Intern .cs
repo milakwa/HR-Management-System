@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,8 @@ namespace HR__Management_System
 {
     public class Intern : Employee
     {
-        public Intern(int id, string name, string department, decimal salary) : base(id, name, department, salary)
+        public Intern(int id, string name, string department, decimal salary) 
+            : base(id, name, department, salary )
         {
         }
 
@@ -16,10 +17,16 @@ namespace HR__Management_System
         {
             if (hoursWorked < 0)
             {
-                throw new Exception("Hours worked cannot be negative!");
+                Console.WriteLine("Hours worked cannot be negative!");
+                Logger.WriteLog("PAYROLL", $"Failed to calculate pay for {Name} (ID={Id})");
+                return 0;
             }
 
-            return GetSalary(); // Interns are paid a fixed stipend
+            decimal stipend = GetSalary();// Interns receive a fixed stipend
+
+            Logger.WriteLog("PAYROLL",$"Intern {Name} (ID={Id}) received fixed stipend: {stipend:C}");
+
+            return stipend; 
         }
     }
 }
