@@ -18,7 +18,7 @@ namespace HR__Management_System
         public bool Login(string user, string pass)
         {
             // Case-insensitive username check
-            if (user == username.ToLower() && pass == password)
+            if (user.ToLower() == username.ToLower() && pass == password)
             {
                 Console.WriteLine("\nAdmin login successfully."); 
                 Logger.WriteLog("ADMIN", "Login successful for Admin.");
