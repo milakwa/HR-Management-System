@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace HR__Management_System
 {
+  // Manager class inherits from Employee
   public  class Manager : Employee 
   {
       // Managers have all Employee properties and methods
