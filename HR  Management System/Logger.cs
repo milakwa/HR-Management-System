@@ -29,13 +29,17 @@ namespace HR__Management_System
             if(logs.Count == 0 )
             {
                 Console.WriteLine("\nNo logs available.");
-                
-        }
-            // Print each log entry
-            foreach (var log in logs)
-            {
-                Console.WriteLine(log);
+
             }
+            else
+            {
+                // Print each log entry
+                foreach (var log in logs)
+                {
+                    Console.WriteLine(log);
+                }
+            }
+            
         }
     }
 }
