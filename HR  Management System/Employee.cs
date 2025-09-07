@@ -8,12 +8,14 @@ namespace HR__Management_System
 {
     public class Employee
     {
+        // Basic employee properties
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Department { get; set; }
+        public Department Department { get; set; }
 
         private decimal Salary;
 
+        // Getter and Setter for Salary with validation
         public decimal GetSalary()
         {
             return Salary;
@@ -22,7 +24,7 @@ namespace HR__Management_System
         {
             if (salary < 0)
             {
-                Console.WriteLine("Salary cannot be negative!");
+                Console.WriteLine("\nSalary cannot be negative, Try again!");
                 Logger.WriteLog("EMPLOYEE", $"Failed salary update for {Name} (ID={Id})");
                 return false; //operation failed
             }
@@ -32,19 +34,20 @@ namespace HR__Management_System
             return true; //operation successful
         }
 
-
-        public Employee(int id, string name, string department, decimal salary)
+        // Constructor
+        public Employee(int id, string name, Department department, decimal salary)
         {
             Id = id;
             Name = name;
             Department = department;
             SetSalary(salary);
         }
+        // Virtual method for calculating pay, can be overridden by derived classes
         public virtual decimal CalculatePay(double hoursWorked)
         {
             if (hoursWorked < 0)
             {
-                Console.WriteLine("Hours worked cannot be negative!");
+                Console.WriteLine("\nHours worked cannot be negative!");
                 Logger.WriteLog("PAYROLL", $"Failed to calculate pay for {Name} (ID={Id})");
                 return 0;
             }
@@ -57,10 +60,17 @@ namespace HR__Management_System
 
             return pay;
         }
-
+        // Method to request leave
+        public LeaveRequest RequestLeave(int days, string reason)
+        {
+            LeaveRequest req = new LeaveRequest(Id, days, reason);
+            Logger.WriteLog("LEAVE", $"Employee {Name} (ID={Id}) requested leave for {days} days. Reason: {reason}");
+            return req;
+        }
+        // Override ToString for easy display
         public override string ToString()
         {
-           return$"ID: {Id}, Name: {Name}, Department: {Department}, Salary: {Salary:C}";
+           return $"ID: {Id}, Name: {Name}, Department: {Department}, Salary: {Salary:C}\n";
         }
     }
 }
