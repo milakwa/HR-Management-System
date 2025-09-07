@@ -383,7 +383,7 @@
                     Console.WriteLine("\nReason cannot be empty. Try again.");
                     continue;
                 }
-                if(reason.Any(char.IsWhiteSpace)|| reason.Any(char.IsLetter) || reason.Any(char.IsDigit))
+                if(reason.Any(ch => !char.IsLetter(ch) && !char.IsWhiteSpace(ch)) || reason.Any(char.IsDigit))
                 {
                     Console.WriteLine("\nReason cannot contain special characters or numbers. Try again.");
                     continue;
