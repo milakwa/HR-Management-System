@@ -12,7 +12,7 @@ namespace HR__Management_System
        public int EmpId { get; set; }
        public int Days { get; set; }
        public string Reason { get; set; }
-       public string Status { get; set; }
+       public string Status { get; private set; }
         // Constructor
         public LeaveRequest(int id,int days,string reason)
         {
