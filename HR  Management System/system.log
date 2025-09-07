@@ -1,0 +1,138 @@
+[2025-09-06 22:00:11] [ADMIN] Login successful for Admin.
+[2025-09-06 22:00:42] [ADMIN] Added new Manager: malak (ID=1).
+[2025-09-06 22:00:55] [ADMIN] Added new Developer: noor (ID=2).
+[2025-09-06 22:01:12] [ADMIN] Added new Intern: boo (ID=3).
+[2025-09-06 22:01:41] [ADMIN] Added new Employee: ali (ID=4).
+[2025-09-06 22:03:25] [ATTENDANCE] Employee 2 checked in at 9/6/2025 10:03:25 PM (Date: 2025-09-06)
+[2025-09-06 22:04:03] [LEAVE] New leave request created for EmpId=2, Days=4, Reason=sick, Status=Pending
+[2025-09-06 22:04:03] [LEAVE] Employee noor (ID=2) requested leave for 4 days. Reason: sick
+[2025-09-06 22:04:17] [ATTENDANCE] Employee 2  checked out at  9/6/2025 10:04:17 PM (Date: 2025-09-06)
+[2025-09-06 22:07:08] [ADMIN] Login successful for Admin.
+[2025-09-06 22:07:21] [ADMIN] Added new Manager: malak (ID=1).
+[2025-09-06 22:07:38] [ADMIN] Added new Developer: noor (ID=2).
+[2025-09-06 22:08:01] [ADMIN] Added new Intern: boo (ID=3).
+[2025-09-06 22:08:19] [ADMIN] Added new Employee: ali (ID=4).
+[2025-09-06 22:08:44] [ATTENDANCE] Employee 2 checked in at 9/6/2025 10:08:44 PM (Date: 2025-09-06)
+[2025-09-06 22:08:57] [LEAVE] New leave request created for EmpId=2, Days=5, Reason=sick, Status=Pending
+[2025-09-06 22:08:57] [LEAVE] Employee noor (ID=2) requested leave for 5 days. Reason: sick
+[2025-09-06 22:09:03] [ATTENDANCE] Employee 2  checked out at  9/6/2025 10:09:03 PM (Date: 2025-09-06)
+[2025-09-06 22:09:28] [ATTENDANCE] Failed checkout attempt for EmpId=1 (No active check-in or already checked out)
+[2025-09-06 22:09:45] [LEAVE] New leave request created for EmpId=1, Days=2, Reason=haaaa, Status=Pending
+[2025-09-06 22:09:45] [LEAVE] Employee malak (ID=1) requested leave for 2 days. Reason: haaaa
+[2025-09-06 22:09:51] [ATTENDANCE] Employee 1 checked in at 9/6/2025 10:09:51 PM (Date: 2025-09-06)
+[2025-09-06 22:10:06] [ATTENDANCE] Employee 4 checked in at 9/6/2025 10:10:06 PM (Date: 2025-09-06)
+[2025-09-06 22:10:09] [ATTENDANCE] Employee 4  checked out at  9/6/2025 10:10:09 PM (Date: 2025-09-06)
+[2025-09-06 22:11:56] [LEAVE] Manager malak (ID=1) approved leave for Employee 2
+[2025-09-06 22:12:44] [LEAVE] Manager malak (ID=1) rejected leave for Employee 1
+[2025-09-06 22:18:49] [ADMIN] Login successful for Admin.
+[2025-09-06 22:19:09] [ADMIN] Added new Developer: malak (ID=1).
+[2025-09-06 22:19:22] [ADMIN] Added new Manager: noor (ID=2).
+[2025-09-06 22:19:42] [ADMIN] Added new Employee: ali (ID=3).
+[2025-09-06 22:19:59] [ADMIN] Added new Intern: boo (ID=4).
+[2025-09-06 22:20:59] [ATTENDANCE] Employee 1 checked in at 9/6/2025 10:20:59 PM (Date: 2025-09-06)
+[2025-09-06 22:21:07] [LEAVE] New leave request created for EmpId=1, Days=6, Reason=sick, Status=Pending
+[2025-09-06 22:21:07] [LEAVE] Employee malak (ID=1) requested leave for 6 days. Reason: sick
+[2025-09-06 22:21:11] [ATTENDANCE] Failed checkin attempt for EmpId=1 (Already checked in)
+[2025-09-06 22:21:15] [ATTENDANCE] Employee 1  checked out at  9/6/2025 10:21:15 PM (Date: 2025-09-06)
+[2025-09-06 22:21:18] [ATTENDANCE] Failed checkout attempt for EmpId=1 (No active check-in or already checked out)
+[2025-09-06 22:22:53] [LEAVE] New leave request created for EmpId=1, Days=1, Reason=222, Status=Pending
+[2025-09-06 22:22:53] [LEAVE] Employee malak (ID=1) requested leave for 1 days. Reason: 222
+[2025-09-06 22:24:33] [ATTENDANCE] Employee 1 checked in at 9/6/2025 10:24:33 PM (Date: 2025-09-06)
+[2025-09-06 22:24:35] [ATTENDANCE] Employee 1  checked out at  9/6/2025 10:24:35 PM (Date: 2025-09-06)
+[2025-09-06 22:24:43] [LEAVE] New leave request created for EmpId=1, Days=4, Reason=wwww, Status=Pending
+[2025-09-06 22:24:43] [LEAVE] Employee malak (ID=1) requested leave for 4 days. Reason: wwww
+[2025-09-06 22:24:52] [ATTENDANCE] Employee 4 checked in at 9/6/2025 10:24:52 PM (Date: 2025-09-06)
+[2025-09-06 22:24:53] [ATTENDANCE] Employee 4  checked out at  9/6/2025 10:24:53 PM (Date: 2025-09-06)
+[2025-09-06 22:25:46] [LEAVE] Manager noor (ID=2) approved leave for Employee 1
+[2025-09-06 22:25:51] [LEAVE] Manager noor (ID=2) rejected leave for Employee 1
+[2025-09-06 22:25:55] [LEAVE] Manager noor (ID=2) rejected leave for Employee 1
+[2025-09-06 22:25:55] [LEAVE] Manager noor (ID=2) reviewed leave requests.
+[2025-09-06 22:26:26] [ADMIN] Login successful for Admin.
+[2025-09-06 22:26:39] [ATTENDANCE] Employee 1 worked for 0.00 hours.
+[2025-09-06 22:26:39] [ATTENDANCE] Employee 1 worked for 0.00 hours.
+[2025-09-06 22:26:39] [PAYROLL] Developer malak (ID=1) calculated pay: $0.64 (Base: $0.64, Overtime: $0.00 for 0h)
+[2025-09-06 22:26:39] [PAYROLL] Calculated salary for Developer [ID=1, Name=malak]: $0.64 for 0.005115684472222222 hours worked.
+[2025-09-06 22:27:45] [ATTENDANCE] Employee 4 worked for 0.00 hours.
+[2025-09-06 22:27:45] [PAYROLL] Intern boo (ID=4) received fixed stipend: $10,000.00
+[2025-09-06 22:27:45] [PAYROLL] Calculated salary for Intern [ID=4, Name=boo]: $10,000.00 for 0.00023521305555555556 hours worked.
+[2025-09-06 22:31:40] [PAYROLL] Payroll calculation failed for noor (ID=2) - No complete attendance records.
+[2025-09-06 22:32:27] [ATTENDANCE] Employee 1 worked for 0.00 hours.
+[2025-09-06 22:32:27] [ATTENDANCE] Employee 1 worked for 0.00 hours.
+[2025-09-06 22:32:27] [PAYROLL] Developer malak (ID=1) calculated pay: $0.64 (Base: $0.64, Overtime: $0.00 for 0h)
+[2025-09-06 22:32:27] [PAYROLL] Calculated salary for Developer [ID=1, Name=malak]: $0.64 for 0.005115684472222222 hours worked.
+[2025-09-06 22:32:39] [PAYROLL] Payroll calculation failed for ali (ID=3) - No complete attendance records.
+[2025-09-06 22:32:43] [ATTENDANCE] Employee 4 worked for 0.00 hours.
+[2025-09-06 22:32:43] [PAYROLL] Intern boo (ID=4) received fixed stipend: $10,000.00
+[2025-09-06 22:32:43] [PAYROLL] Calculated salary for Intern [ID=4, Name=boo]: $10,000.00 for 0.00023521305555555556 hours worked.
+[2025-09-06 22:32:52] [ATTENDANCE] Employee 4 worked for 0.00 hours.
+[2025-09-06 22:32:52] [PAYROLL] Intern boo (ID=4) received fixed stipend: $10,000.00
+[2025-09-06 22:32:52] [PAYROLL] Calculated salary for Intern [ID=4, Name=boo]: $10,000.00 for 0.00023521305555555556 hours worked.
+[2025-09-06 22:58:53] [ADMIN] Login successful for Admin.
+[2025-09-06 22:59:07] [ADMIN] Added new Developer: malak (ID=1).
+[2025-09-06 22:59:16] [ATTENDANCE] Employee 1 checked in at 9/6/2025 10:59:16 PM (Date: 2025-09-06)
+[2025-09-06 22:59:26] [ATTENDANCE] Employee 1  checked out at  9/6/2025 10:59:26 PM (Date: 2025-09-06)
+[2025-09-06 22:59:39] [ADMIN] Login successful for Admin.
+[2025-09-06 22:59:50] [ADMIN] Added new Manager: mmm (ID=2).
+[2025-09-06 23:00:03] [ADMIN] Added new Employee: boo (ID=3).
+[2025-09-06 23:00:10] [ATTENDANCE] Employee 2 checked in at 9/6/2025 11:00:10 PM (Date: 2025-09-06)
+[2025-09-06 23:00:45] [ATTENDANCE] Employee 2  checked out at  9/7/2025 8:00:10 AM (Date: 2025-09-06)
+[2025-09-06 23:01:07] [ADMIN] Login successful for Admin.
+[2025-09-06 23:01:13] [ATTENDANCE] Employee 2 worked for 9.00 hours.
+[2025-09-06 23:01:13] [PAYROLL] Calculated base pay for mmm (ID=2): $1,687.50 for 9 hours.
+[2025-09-06 23:01:13] [PAYROLL] Manager mmm (ID=2) calculated pay: $2,687.50 (Base: $1,687.50 + Bonus: $1,000.00)
+[2025-09-06 23:01:13] [PAYROLL] Calculated salary for Manager [ID=2, Name=mmm]: $2,687.50 for 9 hours worked.
+[2025-09-06 23:04:16] [ADMIN] Login successful for Admin.
+[2025-09-06 23:04:28] [ADMIN] Added new Manager: mm (ID=1).
+[2025-09-06 23:04:39] [ADMIN] Added new Developer: nnn (ID=2).
+[2025-09-06 23:04:58] [ADMIN] Added new Intern: fff (ID=3).
+[2025-09-06 23:05:05] [ATTENDANCE] Employee 1 checked in at 9/6/2025 11:05:05 PM (Date: 2025-09-06)
+[2025-09-06 23:05:14] [ATTENDANCE] Employee 1  checked out at  9/7/2025 9:05:05 AM (Date: 2025-09-06)
+[2025-09-06 23:05:20] [ATTENDANCE] Failed checkout attempt for EmpId=1 (No active check-in or already checked out)
+[2025-09-06 23:05:29] [ATTENDANCE] Employee 2 checked in at 9/6/2025 11:05:29 PM (Date: 2025-09-06)
+[2025-09-06 23:05:39] [ATTENDANCE] Employee 2  checked out at  9/7/2025 5:05:29 AM (Date: 2025-09-06)
+[2025-09-06 23:05:45] [ATTENDANCE] Employee 2 checked in at 9/6/2025 11:05:45 PM (Date: 2025-09-06)
+[2025-09-06 23:06:04] [ATTENDANCE] Failed checkin attempt for EmpId=2 (Already checked in)
+[2025-09-06 23:06:17] [ATTENDANCE] Employee 2  checked out at  9/6/2025 11:06:17 PM (Date: 2025-09-06)
+[2025-09-06 23:06:27] [ATTENDANCE] Failed checkout attempt for EmpId=3 (No active check-in or already checked out)
+[2025-09-06 23:06:28] [ATTENDANCE] Employee 3 checked in at 9/6/2025 11:06:28 PM (Date: 2025-09-06)
+[2025-09-06 23:06:33] [ATTENDANCE] Employee 3  checked out at  9/7/2025 11:06:28 AM (Date: 2025-09-06)
+[2025-09-06 23:06:42] [ADMIN] Login successful for Admin.
+[2025-09-06 23:06:46] [ATTENDANCE] Employee 1 worked for 10.00 hours.
+[2025-09-06 23:06:46] [PAYROLL] Calculated base pay for mm (ID=1): $1,250.00 for 10 hours.
+[2025-09-06 23:06:46] [PAYROLL] Manager mm (ID=1) calculated pay: $2,250.00 (Base: $1,250.00 + Bonus: $1,000.00)
+[2025-09-06 23:06:46] [PAYROLL] Calculated salary for Manager [ID=1, Name=mm]: $2,250.00 for 10 hours worked.
+[2025-09-06 23:07:13] [ATTENDANCE] Employee 2 worked for 6.00 hours.
+[2025-09-06 23:07:13] [ATTENDANCE] Employee 2 worked for 0.01 hours.
+[2025-09-06 23:07:13] [PAYROLL] Developer nnn (ID=2) calculated pay: $1,126.63 (Base: $1,126.63, Overtime: $0.00 for 0h)
+[2025-09-06 23:07:13] [PAYROLL] Calculated salary for Developer [ID=2, Name=nnn]: $1,126.63 for 6.008707129583334 hours worked.
+[2025-09-07 02:13:37] [ADMIN] Login successful for Admin.
+[2025-09-07 02:13:53] [ADMIN] Added new Manager: malak (ID=1).
+[2025-09-07 02:14:06] [ADMIN] Added new Developer: noor (ID=2).
+[2025-09-07 02:14:55] [ADMIN] Added new Intern: ali (ID=3).
+[2025-09-07 02:15:14] [ADMIN] Added new Employee: booo (ID=4).
+[2025-09-07 02:15:29] [ATTENDANCE] Employee 1 checked in at 9/7/2025 2:15:29 AM (Date: 2025-09-07)
+[2025-09-07 02:17:03] [ATTENDANCE] Failed checkin attempt for EmpId=1 (Already checked in)
+[2025-09-07 02:17:36] [ATTENDANCE] Employee 1  checked out at  9/7/2025 12:15:29 PM (Date: 2025-09-07)
+[2025-09-07 02:17:54] [ATTENDANCE] Failed checkout attempt for EmpId=1 (No active check-in or already checked out)
+[2025-09-07 02:17:57] [ATTENDANCE] Employee 1 checked in at 9/7/2025 2:17:57 AM (Date: 2025-09-07)
+[2025-09-07 02:27:47] [ADMIN] Login successful for Admin.
+[2025-09-07 02:28:03] [ADMIN] Added new Manager: malak (ID=1).
+[2025-09-07 02:28:14] [ATTENDANCE] Employee 1 checked in at 9/7/2025 2:28:14 AM (Date: 2025-09-07)
+[2025-09-07 02:28:19] [ATTENDANCE] Employee 1  checked out at  9/7/2025 11:28:14 AM (Date: 2025-09-07)
+[2025-09-07 02:28:22] [ATTENDANCE] Failed checkin attempt for EmpId=1 (Already checked in and out today)
+[2025-09-07 02:28:36] [ADMIN] Login successful for Admin.
+[2025-09-07 02:28:42] [ATTENDANCE] Employee 1 worked for 9.00 hours.
+[2025-09-07 02:28:42] [PAYROLL] Calculated base pay for malak (ID=1): $11.25 for 9 hours.
+[2025-09-07 02:28:42] [PAYROLL] Manager malak (ID=1) calculated pay: $1,011.25 (Base: $11.25 + Bonus: $1,000.00)
+[2025-09-07 02:28:42] [PAYROLL] Calculated salary for Manager [ID=1, Name=malak]: $1,011.25 for 9 hours worked.
+[2025-09-07 03:07:39] [ADMIN] Login successful for Admin.
+[2025-09-07 03:08:42] [ADMIN] Login successful for Admin.
+[2025-09-07 03:09:02] [ADMIN] Added new Manager: malak (ID=1).
+[2025-09-07 03:11:53] [ADMIN] Login successful for Admin.
+[2025-09-07 03:15:59] [ADMIN] Login successful for Admin.
+[2025-09-07 03:17:04] [ADMIN] Login successful for Admin.
+[2025-09-07 03:17:34] [ADMIN] Login successful for Admin.
+[2025-09-07 03:18:32] [ADMIN] Login successful for Admin.
+[2025-09-07 03:19:11] [ADMIN] Login successful for Admin.
+[2025-09-07 03:19:39] [ADMIN] Added new Manager: malak (ID=1).
+[2025-09-07 03:19:55] [ADMIN] Failed to add employee malak (ID=1) - already exists.
