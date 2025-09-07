@@ -19,8 +19,7 @@ namespace HR__Management_System
         {
             if (hoursWorked < 0)
             {
-                Console.WriteLine("Hours worked cannot be negative!");
-
+                Console.WriteLine("\nHours worked cannot be negative!");
                 Logger.WriteLog("PAYROLL", $"Failed to calculate pay for {Name} (ID={Id})");
                 return 0;
             } 
