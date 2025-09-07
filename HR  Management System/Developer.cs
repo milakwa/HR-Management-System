@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace HR__Management_System
 {
+
+    // Developer class inheriting from Employee
     public class Developer : Employee
     {
-        public Developer(int id, string name, string department, decimal salary) 
+        public Developer(int id, string name, Department department, decimal salary) 
             : base(id, name, department, salary)
         {
         }
@@ -17,7 +19,11 @@ namespace HR__Management_System
         {
             if (hoursWorked < 0)
             {
+
+                Console.WriteLine("\nHours worked cannot be negative!");
+
                 Console.WriteLine("Hours worked cannot be negative!");
+
                 Logger.WriteLog("PAYROLL", $"Failed to calculate pay for {Name} (ID={Id})");
                 return 0;
             } 
@@ -41,6 +47,7 @@ namespace HR__Management_System
             return totalPay;
 
         }
+
         public void DoWork()
         {
             Console.WriteLine($"{Name} is working....");
