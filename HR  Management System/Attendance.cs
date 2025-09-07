@@ -25,32 +25,29 @@ namespace HR__Management_System
         public static bool CheckIn(int empId, List<Attendance> records)
         {
             // Prevent multiple check-ins without check-out
-            if (records.Any(a => a.EmployeeID == empId && a.Date == DateTime.Today ))
+            if (records.Any(a => a.EmployeeID == empId && a.Date == DateTime.Today))
             {
-                if(records.Any(a => a.CheckOutTime == default))
+                if (records.Any(a => a.EmployeeID == empId && a.Date == DateTime.Today && a.CheckOutTime == default))
                 {
                     Console.WriteLine("\nAlready checked in today without checking out!");
                     Logger.WriteLog("ATTENDANCE", $"Failed checkin attempt for EmpId={empId} (Already checked in)");
-                return false;
-            }
+                    return false;
+                }
                 else
                 {
                     Console.WriteLine("\nAlready checked in and checked out today. Cannot check in again today!");
                     Logger.WriteLog("ATTENDANCE", $"Failed checkin attempt for EmpId={empId} (Already checked in and out today)");
                     return false;
                 }
-
             }
             // Create new attendance record
             Attendance record = new Attendance(empId);
             record.CheckInTime = DateTime.Now;
             records.Add(record);
+
             // Display confirmation
             Console.WriteLine($"\nEmployee {empId} checked in at {record.CheckInTime} (Date: {record.Date:yyyy-MM-dd})");
             Logger.WriteLog("ATTENDANCE", $"Employee {empId} checked in at {record.CheckInTime} (Date: {record.Date:yyyy-MM-dd})");
-
-            Console.WriteLine($"Employee {empId} checked in at {record.CheckInTime}");
-            Logger.WriteLog("ATTENDANCE", $"Employee {empId} checked in at {record.CheckInTime}");
 
             return true;
         }
@@ -68,29 +65,33 @@ namespace HR__Management_System
                 return false;
             }
             // Ask user for real time or manual hours
-
-            Console.Write("\nUse real time (R) or enter hours manually (M)? ");
-            string choice = Console.ReadLine().Trim().ToUpper();
-
-            if (choice == "M")
+            // Loop until valid choice
+            string choice;
+            do
             {
-                Console.Write("Enter number of hours worked today: ");
-                if (!double.TryParse(Console.ReadLine(), out double hours) || hours <= 0)
+                Console.Write("\nUse real time (R) or enter hours manually (M)? ");
+                choice = Console.ReadLine().Trim().ToUpper();
+
+                if (choice == "M")
                 {
-                    Console.WriteLine("\nInvalid hours. Checkout failed.");
-                    return false;
+                    Console.Write("Enter number of hours worked today: ");
+                    if (!double.TryParse(Console.ReadLine(), out double hours) || hours <= 0)
+                    {
+                        Console.WriteLine("\nInvalid hours. Checkout failed.");
+                        return false;
+                    }
+                    record.CheckOutTime = record.CheckInTime.AddHours(hours);
                 }
-                record.CheckOutTime = record.CheckInTime.AddHours(hours);
-            }
-            else if (choice == "R")
-            {
-                record.CheckOutTime = DateTime.Now;
-            }
-            else
-            {
-                Console.WriteLine("\nInvalid choice. Checkout failed.");
-                return false;
-            }
+                else if (choice == "R")
+                {
+                    record.CheckOutTime = DateTime.Now;
+                }
+                else
+                {
+                    Console.WriteLine("\nInvalid choice. Try again.");
+                }
+            } while (choice != "M" && choice != "R");
+
             // Validate checkout time
             double workedHours = (record.CheckOutTime - record.CheckInTime).TotalHours;
 
